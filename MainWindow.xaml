@@ -1,0 +1,116 @@
+﻿<Window x:Class="TriUgl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TriUgl"
+        mc:Ignorable="d"
+        Title="ТРИ УГЛА" Height="250" Width="450"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Window.Clip>
+        <RectangleGeometry Rect="0,0,450,250" RadiusX="10" RadiusY="10"/>
+    </Window.Clip>
+    <Border BorderBrush="#b8bdb5" BorderThickness="2">
+        <Grid Background="#d2d4c8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#b8bdb5">
+                <Button Name="Exit"
+                            Click="Exit_Click"
+                            Width="25" 
+                            Height="15" 
+                            HorizontalAlignment="Right"
+                            Margin="0,0,5,0"
+                            Background="#313638">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" 
+                                         Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="4" Grid.ColumnSpan="2" 
+                  Background="#b8bdb5"/>
+            <Grid Grid.Row="1">
+                <TextBox Margin="60,40,60,0"
+                                TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
+                                Name="Val1"
+                                BorderBrush="#889696"
+                                Background="#e0e2db"
+                                FontSize="22"
+                                TextAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border" >
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="2">
+                <TextBox Margin="60,20,60,20"
+                                TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
+                                Name="Val2"
+                                BorderBrush="#889696"
+                                Background="#e0e2db"
+                                FontSize="22"
+                                TextAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border" >
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <TextBox Margin="60,0,60,40"
+                                TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
+                                Name="Val3"
+                                BorderBrush="#889696"
+                                Background="#e0e2db"
+                                FontSize="22"
+                                TextAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border" >
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="ПОСЧИТАТЬ"
+                                    FontSize="20"
+                                    Foreground="#313638"
+                                    FontWeight="DemiBold"
+                                    Margin="0,5,0,0"/>
+                    <Button Name="Enter"
+                            Click="Enter_Click"
+                            Margin="0,5,60,0"
+                            Background="#313638"
+                            Height="30"
+                            BorderThickness="0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5,5,5,5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
