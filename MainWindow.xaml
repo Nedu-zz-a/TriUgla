@@ -10,7 +10,8 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        FontFamily="Garamond">
     <Window.Clip>
         <RectangleGeometry Rect="0,0,450,250" RadiusX="10" RadiusY="10"/>
     </Window.Clip>
@@ -51,7 +52,7 @@
                                 Name="Val1"
                                 BorderBrush="#889696"
                                 Background="#e0e2db"
-                                FontSize="22"
+                                FontSize="26"
                                 TextAlignment="Center">
                     <TextBox.Resources>
                         <Style TargetType="Border" >
@@ -66,7 +67,7 @@
                                 Name="Val2"
                                 BorderBrush="#889696"
                                 Background="#e0e2db"
-                                FontSize="22"
+                                FontSize="26"
                                 TextAlignment="Center">
                     <TextBox.Resources>
                         <Style TargetType="Border" >
@@ -81,7 +82,7 @@
                                 Name="Val3"
                                 BorderBrush="#889696"
                                 Background="#e0e2db"
-                                FontSize="22"
+                                FontSize="26"
                                 TextAlignment="Center">
                     <TextBox.Resources>
                         <Style TargetType="Border" >
@@ -99,7 +100,7 @@
                                     Margin="0,5,0,0"/>
                     <Button Name="Enter"
                             Click="Enter_Click"
-                            Margin="0,5,60,0"
+                            Margin="0,5,45,0"
                             Background="#313638"
                             Height="30"
                             BorderThickness="0">
