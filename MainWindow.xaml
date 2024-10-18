@@ -25,10 +25,11 @@
                 <RowDefinition Height="5"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="1.17*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#b8bdb5">
+            <Grid Grid.Row="0" Grid.ColumnSpan="3" Background="#b8bdb5">
                 <Button Name="Exit"
                             Click="Exit_Click"
                             Width="25" 
@@ -44,10 +45,18 @@
                     </Button.Resources>
                 </Button>
             </Grid>
-            <Grid Grid.Row="4" Grid.ColumnSpan="2" 
+            <Grid Grid.Row="4" Grid.ColumnSpan="3" 
                   Background="#b8bdb5"/>
             <Grid Grid.Row="1">
-                <TextBox Margin="60,40,60,0"
+                <TextBlock Text="a" VerticalAlignment="Bottom"
+                           FontSize="26"
+                           FontWeight="DemiBold"
+                           Foreground="#313638"
+                           HorizontalAlignment="Center"
+                           Margin="5"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <TextBox Margin="0,40,60,0"
                                 TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
                                 Name="Val1"
                                 BorderBrush="#889696"
@@ -62,7 +71,14 @@
                 </TextBox>
             </Grid>
             <Grid Grid.Row="2">
-                <TextBox Margin="60,20,60,20"
+                <TextBlock Text="b" VerticalAlignment="Center"
+                           FontSize="26"
+                           FontWeight="DemiBold"
+                           Foreground="#313638"
+                           HorizontalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <TextBox Margin="0,20,60,20"
                                 TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
                                 Name="Val2"
                                 BorderBrush="#889696"
@@ -77,7 +93,14 @@
                 </TextBox>
             </Grid>
             <Grid Grid.Row="3">
-                <TextBox Margin="60,0,60,40"
+                <TextBlock Text="c" VerticalAlignment="Top"
+                           FontSize="26"
+                           FontWeight="DemiBold"
+                           Foreground="#313638"
+                           HorizontalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <TextBox Margin="0,0,60,40"
                                 TextCompositionManager.PreviewTextInput="Val1_PreviewTextInput"
                                 Name="Val3"
                                 BorderBrush="#889696"
@@ -91,7 +114,7 @@
                     </TextBox.Resources>
                 </TextBox>
             </Grid>
-            <Grid Grid.Row="2" Grid.Column="1">
+            <Grid Grid.Row="2" Grid.Column="2">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="ПОСЧИТАТЬ"
                                     FontSize="20"
@@ -115,3 +138,4 @@
         </Grid>
     </Border>
 </Window>
+
